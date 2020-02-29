@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Up To Date -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BuzzLine</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <!-- First White Container -->
+    <div class="container">
+        <header>
+            <img src="images/BuzzLineLogo.png" alt="BuzzLine logo" class="logo">
+<!-- Dynamic Navigation Bar -->
+            <nav>
+                <a href="#" class="hide-desktop">
+                    <img src="images/MenuIcon.png" alt="toggle menu" class="menu" id="menu">
+                </a>
+
+                <ul class="show-desktop hide-mobile" id="nav">
+                    <li id="exit" class="exit-btn hide-desktop">
+                        <img src="images/exit.svg" alt="exit menu">
+                    </li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Analyze</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+<!-- Area under Navigation Bar -->
+        <section>
+            <img src="images/BuzzLineBrand.png" alt="Server Logo" class="server">
+            
+            <h1>Invest in Buzzineses</h1>
+            <p class="subhead">In today’s busy day and age, the everyday investor does not have time to conduct the 20+ hours of necessary due diligence to understand a company’s financial health and the intricacies of their business model. Consequently, the stock market has become more reactive to news, or “buzz” surrounding a company rather behind-the-scene changes to supply chain or restructuring that affects profit. Take Tesla, whose volatile stock prices can be in part attributed to the eccentricness of Elon Musk. BuzzLine gathers historical data and uses machine learning to determine the past correlation between “buzz” and the stock price of a specific company. Then BuzzLine will out a “Buzz Score” that is a recommendation for whether you should buy, sell, or hold.</p>
+<!-- Moving Scroll Icon -->
+            <img src="images/scroll.svg" alt="scroll down" class="scroll hide-mobile show-desktop">
+        </section>
+    </div>
+<!-- Second Blue Container -->
+    <div class="blue-container">
+        <div class="container">
+            <ul>
+                <li>
+                    <img src="images/Graph.png" alt="Calendar icon">
+                    <p>Visualize companies and their stock growth as well as their associated sentiments </p>
+                </li>
+                <li>
+                    <img src="images/Data.png" alt="Calendar icon">
+                    <p>Capitalize on the latest data on companies to stay up to date</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+<!-- Third Grey Container -->
+    <div class="gray-container">
+        <div class="container">
+            <ul>
+                <li>
+                    <figure>
+                        <img src="images/Abir.JPG" alt="User testimonial picture" id="testimonial1">
+                        <blockquote>Investing has never been more intentional!</blockquote>
+                        <figcaption>- Abir Mazumder</figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <img src="images/Zinnie.jpeg" alt="User testimonial picture" id="testimonial2">
+                        <blockquote>I am so grateful for this web service. Absolutely changed my life.</blockquote>
+                        <figcaption>- Zinnie Zhang</figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <img src="images/Sithara.jpg" alt="User testimonial picture" id="testimonial3">
+                        <blockquote>Investing has never been more intentional!</blockquote>
+                        <figcaption>- Sithara Samudrala</figcaption>
+                    </figure>
+                </li>
+            
+            </ul>
+        </div>
+    </div>
+<!-- Last White Container -->
+    <div class="container">
+        <h2>Start our free service now!</h2>
+        <a href="#" class="cta">Get Started</a>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="container">
+                <a href="#">
+                    <img src="images/BuzzLineLogoBlack.png" class="logo" alt="logo">
+                </a>
+                <p class="address">2301 Vanderbilt Place, Nashville 37235<br>USA</p>
+                <ul class="footer-links">
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+    
+        var menu = document.getElementById('menu');
+        var nav = document.getElementById('nav');
+        var exit = document.getElementById('exit');
+
+        menu.addEventListener('click', function(e) {
+            nav.classList.toggle('hide-mobile');
+            e.preventDefault();
+        });
+
+        exit.addEventListener('click', function(e) {
+            nav.classList.add('hide-mobile');
+            e.preventDefault();
+        });
+
+    </script>
+
+</body>
+</html>
