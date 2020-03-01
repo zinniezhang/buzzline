@@ -40,7 +40,7 @@ header {
 
 .server {
     width: 50%;
-    margin: 2em auto 2em 25%;
+    margin: 2em 12em 2em 25%;
     position: relative;
 }
 
@@ -135,7 +135,7 @@ h1, .subhead {
 }
 
 .gray-container ul li:nth-child(3) figure img {
-    width: 170%;
+    width: 95%;
     border-radius: 100%;
 }
 
@@ -253,6 +253,14 @@ nav ul li a:hover {
     cursor: pointer;
 }
 
+form {
+    width: 100%;
+    display: block;
+    padding: .5em;
+    font-size: 1.5em;
+    margin: 1.5em 1em 1.5em -1em;
+}
+
 @media only screen and (min-width: 650px)  {
 
     .server {
@@ -367,7 +375,7 @@ nav ul li a:hover {
     }
 
     .scroll {
-        width: 30px;
+        width: 120px;
         animation: move 1s infinite alternate;
     }
 
