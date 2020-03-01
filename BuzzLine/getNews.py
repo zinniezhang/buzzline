@@ -46,6 +46,6 @@ def graphTicker(tickerSymbol):
     plt.show()
     plt.scatter(publishingDate, sentimentAnalysis)
     plt.savefig('sentimentValue.png')
-    return tickerSymbol + '.png'
+    return 'stocks/' + tickerSymbol + '.png'
     
 

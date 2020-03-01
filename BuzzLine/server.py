@@ -1,6 +1,8 @@
 #!/usr/bin/python
 from http.server import BaseHTTPRequestHandler,HTTPServer, SimpleHTTPRequestHandler
 from getNews import graphTicker
+import os
+
 
 PORT_NUMBER = 8080
 
@@ -10,11 +12,24 @@ class myHandler(BaseHTTPRequestHandler):
 	
 	#Handler for the GET requests
 	def do_GET(self):
-		self.send_response(200)
-		self.send_header('Content-type','text/html')
-		self.end_headers()
+		if os.path.exists(self.path[1:]):
+			with open(self.path[1:], 'rb') as f:
+				self.send_response(200)
+				if self.path.split('.')[1] == 'png':
+					self.send_header('Content-Type', 'image/png')
+				if self.path.split('.')[1] == 'html':
+					self.send_header('Content-Type', 'text/html')
+				if self.path.split('.')[1] == 'css':
+					self.send_header('Content-Type', 'text/css')
+				if self.path.split('.')[1] == 'jpg' or self.path.split('.')[1] == 'jpeg':
+					self.send_header('Content-Type', 'image/jpeg')
+				self.end_headers()
+				self.wfile.write(f.read())
 		# Send the html message
-		self.wfile.write(bytes('http://localhost:8000/' + graphTicker(self.path[1:]), 'utf-8'))
+		elif self.path == '/favicon.ico':
+			self.send_response(404)
+		else:
+			self.wfile.write(bytes('http://localhost:8080/' + graphTicker(self.path[1:]), 'utf-8'))
 		return
 
 try:
